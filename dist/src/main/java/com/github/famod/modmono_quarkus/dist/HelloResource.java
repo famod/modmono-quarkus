@@ -13,10 +13,13 @@ public class HelloResource {
 
     @Inject
     HelloBean bean;
-    
+
+    @Inject
+    AnotherHelloBean bean2;
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return bean.hello() + "!";
+        return bean.hello() + bean2.hello();
     }
 }
