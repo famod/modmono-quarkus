@@ -11,8 +11,9 @@
   <dependencies>
     <dependency>
       <groupId>com.github.famod.modmono-quarkus</groupId>
-      <artifactId>modmono-quarkus-core</artifactId>
+      <artifactId>modmono-quarkus-test</artifactId>
       <version>${project.version}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
