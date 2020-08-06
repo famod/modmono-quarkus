@@ -61,6 +61,7 @@
             <systemPropertyVariables>
               <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
               <quarkus.http.host>${quarkus.http.host}</quarkus.http.host>
+              <quarkus.http.test-port>0</quarkus.http.test-port>
             </systemPropertyVariables>
           </configuration>
         </plugin>
