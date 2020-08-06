@@ -70,6 +70,7 @@
   </build>
   <modules>
     <module>core</module>
+    <module>support</module>
     <module>dist</module>
   </modules>
 </project>

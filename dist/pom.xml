@@ -46,6 +46,17 @@
   </build>
   <profiles>
     <profile>
+      <id>support</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.github.famod.modmono-quarkus</groupId>
+          <artifactId>modmono-quarkus-support</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+      </dependencies>
+    </profile>
+
+    <profile>
       <id>native</id>
       <activation>
         <property>

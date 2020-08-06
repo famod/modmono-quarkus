@@ -7,15 +7,16 @@
     <artifactId>modmono-quarkus-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>modmono-quarkus-core</artifactId>
+  <artifactId>modmono-quarkus-support</artifactId>
   <dependencies>
     <dependency>
-      <groupId>jakarta.enterprise</groupId>
-      <artifactId>jakarta.enterprise.cdi-api</artifactId>
+      <groupId>com.github.famod.modmono-quarkus</groupId>
+      <artifactId>modmono-quarkus-core</artifactId>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-hibernate-validator</artifactId>
+      <artifactId>quarkus-resteasy</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
