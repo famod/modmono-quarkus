@@ -15,6 +15,14 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
+      <groupId>com.github.famod.modmono-quarkus</groupId>
+      <artifactId>modmono-quarkus-core</artifactId>
+      <version>${project.version}</version>
+      <classifier>tests</classifier>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy</artifactId>
     </dependency>
