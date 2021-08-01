@@ -7,20 +7,23 @@
     <artifactId>modmono-quarkus-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>modmono-quarkus-core</artifactId>
+  <artifactId>modmono-quarkus-support</artifactId>
   <dependencies>
     <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-arc</artifactId>
+      <groupId>com.github.famod.modmono-quarkus</groupId>
+      <artifactId>modmono-quarkus-core</artifactId>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-junit5</artifactId>
+      <groupId>com.github.famod.modmono-quarkus</groupId>
+      <artifactId>modmono-quarkus-core</artifactId>
+      <version>${project.version}</version>
+      <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-junit5-mockito</artifactId>
+      <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -39,21 +42,25 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>mock-jar</id>
-            <goals>
-              <goal>test-jar</goal>
-            </goals>
-            <configuration>
-              <classifier>mocks</classifier>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>mocks</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.github.famod.modmono-quarkus</groupId>
+          <artifactId>modmono-quarkus-core</artifactId>
+          <version>${project.version}</version>
+          <classifier>mocks</classifier>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-core</artifactId>
+          <scope>runtime</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 </project>

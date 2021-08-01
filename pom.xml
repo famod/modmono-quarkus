@@ -73,8 +73,14 @@
       </plugins>
     </pluginManagement>
   </build>
+  <profiles>
+    <profile>
+      <id>mocks</id>
+    </profile>
+  </profiles>
   <modules>
     <module>core</module>
+    <module>support</module>
     <module>dist</module>
   </modules>
 </project>
